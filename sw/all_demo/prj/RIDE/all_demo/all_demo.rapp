@@ -1,0 +1,131 @@
+
+<ApplicationBuild Header="all_demo" Extern=".\all_demo.rapp" Path=".\all_demo.rapp" OutputFile=".\all_demo.elf" sate="66" >
+	<Group Header="User" Marker="-1" OutputFile="" sate="0" >
+		<NodeC Path="..\..\..\src\vs1003b.c" Header="vs1003b.c" Marker="-1" OutputFile=".\vs1003b.o" sate="0" />
+		<NodeC Path="..\..\..\src\adc.c" Header="adc.c" Marker="-1" OutputFile=".\adc.o" sate="0" />
+		<NodeC Path="..\..\..\src\at24c02.c" Header="at24c02.c" Marker="-1" OutputFile=".\at24c02.o" sate="0" />
+		<NodeC Path="..\..\..\src\buzzer.c" Header="buzzer.c" Marker="-1" OutputFile=".\buzzer.o" sate="0" />
+		<NodeC Path="..\..\..\src\can.c" Header="can.c" Marker="-1" OutputFile=".\can.o" sate="0" />
+		<NodeC Path="..\..\..\src\dac.c" Header="dac.c" Marker="-1" OutputFile=".\dac.o" sate="0" />
+		<NodeC Path="..\..\..\src\diskio.c" Header="diskio.c" Marker="-1" OutputFile=".\diskio.o" sate="0" />
+		<NodeC Path="..\..\..\src\ff.c" Header="ff.c" Marker="-1" OutputFile=".\ff.o" sate="0" />
+		<NodeC Path="..\..\..\src\font.c" Header="font.c" Marker="-1" OutputFile=".\font.o" sate="0" />
+		<NodeC Path="..\..\..\src\hw_config.c" Header="hw_config.c" Marker="-1" OutputFile=".\hw_config.o" sate="0" />
+		<NodeC Path="..\..\..\src\icon.c" Header="icon.c" Marker="-1" OutputFile=".\icon.o" sate="0" />
+		<NodeC Path="..\..\..\src\iic.c" Header="iic.c" Marker="-1" OutputFile=".\iic.o" sate="0" />
+		<NodeC Path="..\..\..\src\key.c" Header="key.c" Marker="-1" OutputFile=".\key.o" sate="0" />
+		<NodeC Path="..\..\..\src\lcd28.c" Header="lcd28.c" Marker="-1" OutputFile=".\lcd28.o" sate="0" />
+		<NodeC Path="..\..\..\src\lcd32.c" Header="lcd32.c" Marker="-1" OutputFile=".\lcd32.o" sate="0" />
+		<NodeC Path="..\..\..\src\lcd43.c" Header="lcd43.c" Marker="-1" OutputFile=".\lcd43.o" sate="0" />
+		<NodeC Path="..\..\..\src\lcd70.c" Header="lcd70.c" Marker="-1" OutputFile=".\lcd70.o" sate="0" />
+		<NodeC Path="..\..\..\src\lcd1602.c" Header="lcd1602.c" Marker="-1" OutputFile=".\lcd1602.o" sate="0" />
+		<NodeC Path="..\..\..\src\lcd12864.c" Header="lcd12864.c" Marker="-1" OutputFile=".\lcd12864.o" sate="0" />
+		<NodeC Path="..\..\..\src\lcd.c" Header="lcd.c" Marker="-1" OutputFile=".\lcd.o" sate="0" />
+		<NodeC Path="..\..\..\src\led.c" Header="led.c" Marker="-1" OutputFile=".\led.o" sate="0" />
+		<NodeC Path="..\..\..\src\main.c" Header="main.c" Marker="-1" OutputFile=".\main.o" sate="0" />
+		<NodeC Path="..\..\..\src\mmc_sd.c" Header="mmc_sd.c" Marker="-1" OutputFile=".\mmc_sd.o" sate="0" />
+		<NodeC Path="..\..\..\src\nrf24l01.c" Header="nrf24l01.c" Marker="-1" OutputFile=".\nrf24l01.o" sate="0" />
+		<NodeC Path="..\..\..\src\queue.c" Header="queue.c" Marker="-1" OutputFile=".\queue.o" sate="0" />
+		<NodeC Path="..\..\..\src\rs485.c" Header="rs485.c" Marker="-1" OutputFile=".\rs485.o" sate="0" />
+		<NodeC Path="..\..\..\src\rtc.c" Header="rtc.c" Marker="-1" OutputFile=".\rtc.o" sate="0" />
+		<NodeC Path="..\..\..\src\spi.c" Header="spi.c" Marker="-1" OutputFile=".\spi.o" sate="0" />
+		<NodeC Path="..\..\..\src\stm32f10x_it.c" Header="stm32f10x_it.c" Marker="-1" OutputFile=".\stm32f10x_it.o" sate="0" />
+		<NodeC Path="..\..\..\src\timer.c" Header="timer.c" Marker="-1" OutputFile=".\timer.o" sate="0" />
+		<NodeC Path="..\..\..\src\touch.c" Header="touch.c" Marker="-1" OutputFile=".\touch.o" sate="0" />
+		<NodeC Path="..\..\..\src\usart.c" Header="usart.c" Marker="-1" OutputFile=".\usart.o" sate="0" />
+		<NodeC Path="..\..\..\src\usb_desc.c" Header="usb_desc.c" Marker="-1" OutputFile=".\usb_desc.o" sate="0" />
+		<NodeC Path="..\..\..\src\usb_istr.c" Header="usb_istr.c" Marker="-1" OutputFile=".\usb_istr.o" sate="0" />
+		<NodeC Path="..\..\..\src\usb_prop.c" Header="usb_prop.c" Marker="-1" OutputFile=".\usb_prop.o" sate="0" />
+		<NodeC Path="..\..\..\src\usb_pwr.c" Header="usb_pwr.c" Marker="-1" OutputFile=".\usb_pwr.o" sate="0" />
+	</Group>
+	<Group Header="CMSIS" Marker="-1" OutputFile="" sate="96" >
+		<NodeASM Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\CMSIS\Device\ST\STM32F10x\Source\Templates\gcc_ride7\startup_stm32f10x_hd.s" Header="startup_stm32f10x_hd.s" Marker="-1" OutputFile=".\startup_stm32f10x_hd.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\CMSIS\Device\ST\STM32F10x\Source\Templates\system_stm32f10x.c" Header="system_stm32f10x.c" Marker="-1" OutputFile=".\system_stm32f10x.o" sate="0" />
+	</Group>
+	<Group Header="USB-FS-Device_Driver" Marker="-1" OutputFile="" sate="0" >
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\src\usb_sil.c" Header="usb_sil.c" Marker="-1" OutputFile=".\usb_sil.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\src\otgd_fs_cal.c" Header="otgd_fs_cal.c" Marker="-1" OutputFile=".\otgd_fs_cal.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\src\otgd_fs_dev.c" Header="otgd_fs_dev.c" Marker="-1" OutputFile=".\otgd_fs_dev.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\src\otgd_fs_int.c" Header="otgd_fs_int.c" Marker="-1" OutputFile=".\otgd_fs_int.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\src\otgd_fs_pcd.c" Header="otgd_fs_pcd.c" Marker="-1" OutputFile=".\otgd_fs_pcd.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\src\usb_core.c" Header="usb_core.c" Marker="-1" OutputFile=".\usb_core.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\src\usb_init.c" Header="usb_init.c" Marker="-1" OutputFile=".\usb_init.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\src\usb_int.c" Header="usb_int.c" Marker="-1" OutputFile=".\usb_int.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\src\usb_mem.c" Header="usb_mem.c" Marker="-1" OutputFile=".\usb_mem.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\src\usb_regs.c" Header="usb_regs.c" Marker="-1" OutputFile=".\usb_regs.o" sate="0" />
+	</Group>
+	<Group Header="STM32F10x_StdPeriph_Driver" Marker="-1" OutputFile="" sate="96" >
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c" Header="stm32f10x_wwdg.c" Marker="-1" OutputFile=".\stm32f10x_wwdg.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c" Header="misc.c" Marker="-1" OutputFile=".\misc.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c" Header="stm32f10x_adc.c" Marker="-1" OutputFile=".\stm32f10x_adc.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.c" Header="stm32f10x_bkp.c" Marker="-1" OutputFile=".\stm32f10x_bkp.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.c" Header="stm32f10x_can.c" Marker="-1" OutputFile=".\stm32f10x_can.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.c" Header="stm32f10x_cec.c" Marker="-1" OutputFile=".\stm32f10x_cec.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.c" Header="stm32f10x_crc.c" Marker="-1" OutputFile=".\stm32f10x_crc.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.c" Header="stm32f10x_dac.c" Marker="-1" OutputFile=".\stm32f10x_dac.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.c" Header="stm32f10x_dbgmcu.c" Marker="-1" OutputFile=".\stm32f10x_dbgmcu.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c" Header="stm32f10x_dma.c" Marker="-1" OutputFile=".\stm32f10x_dma.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c" Header="stm32f10x_exti.c" Marker="-1" OutputFile=".\stm32f10x_exti.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c" Header="stm32f10x_flash.c" Marker="-1" OutputFile=".\stm32f10x_flash.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.c" Header="stm32f10x_fsmc.c" Marker="-1" OutputFile=".\stm32f10x_fsmc.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c" Header="stm32f10x_gpio.c" Marker="-1" OutputFile=".\stm32f10x_gpio.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c" Header="stm32f10x_i2c.c" Marker="-1" OutputFile=".\stm32f10x_i2c.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.c" Header="stm32f10x_iwdg.c" Marker="-1" OutputFile=".\stm32f10x_iwdg.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c" Header="stm32f10x_pwr.c" Marker="-1" OutputFile=".\stm32f10x_pwr.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c" Header="stm32f10x_rcc.c" Marker="-1" OutputFile=".\stm32f10x_rcc.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.c" Header="stm32f10x_rtc.c" Marker="-1" OutputFile=".\stm32f10x_rtc.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.c" Header="stm32f10x_sdio.c" Marker="-1" OutputFile=".\stm32f10x_sdio.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c" Header="stm32f10x_spi.c" Marker="-1" OutputFile=".\stm32f10x_spi.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c" Header="stm32f10x_tim.c" Marker="-1" OutputFile=".\stm32f10x_tim.o" sate="0" />
+		<NodeC Path="..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c" Header="stm32f10x_usart.c" Marker="-1" OutputFile=".\stm32f10x_usart.o" sate="0" />
+	</Group>
+	<Options>
+		<Config Header="Standard" >
+			<Set Header="ApplicationBuild" >
+				<Section Header="General" >
+					<Property Header="TargetFamily" Value="ARM" />
+																
+				</Section>
+				<Section Header="Directories" >
+					<Property Header="IncDir" Value=".;..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\CMSIS\Device\ST\STM32F10x\Include;..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\CMSIS\Include;..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32_USB-FS-Device_Driver\inc;..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\STM32F10x_StdPeriph_Driver\inc;..\..\..\src" Removable="1" />
+							
+				</Section>
+					
+			</Set>
+			<Set Header="Target" >
+				<Section Header="ProcessorARM" >
+					<Property Header="Processor" Value="STM32F103VCT6" />
+																
+				</Section>
+				<Section Header="ToolSetARM" >
+					<Property Header="BuildToolSetARM" Value="ARM\GNU.config" />
+																
+				</Section>
+												
+			</Set>
+			<Set Header="GCC" >
+				<Section Header="Defines" >
+					<Property Header="Defines" Value="USE_STDPERIPH_DRIVER;STM32F10X_HD" Removable="1" />
+							
+				</Section>
+					
+			</Set>
+			<Set Header="LD" >
+				<Section Header="Scripts" >
+					<Property Header="StarterKitLimit" Value="No" Removable="1" />
+							
+				</Section>
+				<Section Header="Startup" >
+					<Property Header="DEFAULTSTARTUP" Value="No" Removable="1" />
+					<Property Header="File" Value="" Removable="1" />
+							
+				</Section>
+				<Section Header="LIB" >
+					<Property Header="UART0PUTC" Value="0" Removable="1" />
+							
+				</Section>
+					
+			</Set>
+		</Config>
+	</Options>
+</ApplicationBuild>

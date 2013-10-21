@@ -1,0 +1,101 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\svn\stm32\stm32_high\sw\prj\MDK-ARMv4\all_demo\stm32_high.uvproj
+Project File Date:  09/04/2013
+
+<h2>Output:</h2>
+Build target 'stm32_high'
+compiling lcd43.c...
+..\..\..\src\lcd43.c(613): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(638): warning:  #12-D: parsing restarts here after previous syntax error
+..\..\..\src\lcd43.c(639): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(642): warning:  #12-D: parsing restarts here after previous syntax error
+..\..\..\src\lcd43.c(643): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(645): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(647): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(649): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(651): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(653): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(655): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(657): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(660): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(663): warning:  #12-D: parsing restarts here after previous syntax error
+..\..\..\src\lcd43.c(664): error:  #77-D: this declaration has no storage class or type specifier
+..\..\..\src\lcd43.c(664): error:  #147: declaration is incompatible with "unsigned int BACK_COLOR" (declared at line 32)
+..\..\..\src\lcd43.c(666): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(717): warning:  #12-D: parsing restarts here after previous syntax error
+..\..\..\src\lcd43.c(718): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(719): error:  #77-D: this declaration has no storage class or type specifier
+..\..\..\src\lcd43.c(719): error:  #20: identifier "t1" is undefined
+..\..\..\src\lcd43.c(721): error:  #169: expected a declaration
+..\..\..\src\lcd43.c(782): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+..\..\..\src\lcd43.c(34): warning:  #177-D: variable "orientation_mode" was declared but never referenced
+assembling startup_stm32f10x_hd.s...
+Target not created
+Build target 'stm32_high'
+compiling lcd43.c...
+assembling startup_stm32f10x_hd.s...
+linking...
+Program Size: Code=72456 RO-data=75124 RW-data=496 ZI-data=12992  
+FromELF: creating hex file...
+".\stm32_high\stm32_high.axf" - 0 Error(s), 0 Warning(s).
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Internal DLL Error
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Internal DLL Error
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "D:\\svn\\stm32\\stm32_high\\sw\\prj\\MDK-ARMv4\\all_demo\\stm32_high\\stm32_high.AXF" 

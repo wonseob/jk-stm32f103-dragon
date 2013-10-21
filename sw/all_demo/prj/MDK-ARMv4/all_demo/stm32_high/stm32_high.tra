@@ -1,0 +1,88 @@
+*** Creating Trace Output File '.\stm32_high\stm32_high.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\stm32_high\main.o"'
+### List of Objects: adding '".\stm32_high\usb_pwr.o"'
+### List of Objects: adding '".\stm32_high\diskio.o"'
+### List of Objects: adding '".\stm32_high\ff.o"'
+### List of Objects: adding '".\stm32_high\hw_config.o"'
+### List of Objects: adding '".\stm32_high\key.o"'
+### List of Objects: adding '".\stm32_high\led.o"'
+### List of Objects: adding '".\stm32_high\mmc_sd.o"'
+### List of Objects: adding '".\stm32_high\nrf24l01.o"'
+### List of Objects: adding '".\stm32_high\queue.o"'
+### List of Objects: adding '".\stm32_high\rtc.o"'
+### List of Objects: adding '".\stm32_high\spi.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_it.o"'
+### List of Objects: adding '".\stm32_high\timer.o"'
+### List of Objects: adding '".\stm32_high\usart.o"'
+### List of Objects: adding '".\stm32_high\usb_desc.o"'
+### List of Objects: adding '".\stm32_high\usb_istr.o"'
+### List of Objects: adding '".\stm32_high\usb_prop.o"'
+### List of Objects: adding '".\stm32_high\vs1003b.o"'
+### List of Objects: adding '".\stm32_high\at24c02.o"'
+### List of Objects: adding '".\stm32_high\iic.o"'
+### List of Objects: adding '".\stm32_high\rs485.o"'
+### List of Objects: adding '".\stm32_high\can.o"'
+### List of Objects: adding '".\stm32_high\dac.o"'
+### List of Objects: adding '".\stm32_high\adc.o"'
+### List of Objects: adding '".\stm32_high\buzzer.o"'
+### List of Objects: adding '".\stm32_high\lcd43.o"'
+### List of Objects: adding '".\stm32_high\touch.o"'
+### List of Objects: adding '".\stm32_high\lcd70.o"'
+### List of Objects: adding '".\stm32_high\lcd.o"'
+### List of Objects: adding '".\stm32_high\icon.o"'
+### List of Objects: adding '".\stm32_high\font.o"'
+### List of Objects: adding '".\stm32_high\lcd28.o"'
+### List of Objects: adding '".\stm32_high\lcd12864.o"'
+### List of Objects: adding '".\stm32_high\lcd1602.o"'
+### List of Objects: adding '".\stm32_high\lcd32.o"'
+### List of Objects: adding '".\stm32_high\system_stm32f10x.o"'
+### List of Objects: adding '".\stm32_high\startup_stm32f10x_hd.o"'
+### List of Objects: adding '".\stm32_high\otgd_fs_cal.o"'
+### List of Objects: adding '".\stm32_high\otgd_fs_dev.o"'
+### List of Objects: adding '".\stm32_high\otgd_fs_int.o"'
+### List of Objects: adding '".\stm32_high\otgd_fs_pcd.o"'
+### List of Objects: adding '".\stm32_high\usb_core.o"'
+### List of Objects: adding '".\stm32_high\usb_init.o"'
+### List of Objects: adding '".\stm32_high\usb_int.o"'
+### List of Objects: adding '".\stm32_high\usb_mem.o"'
+### List of Objects: adding '".\stm32_high\usb_regs.o"'
+### List of Objects: adding '".\stm32_high\usb_sil.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_wwdg.o"'
+### List of Objects: adding '".\stm32_high\misc.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_adc.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_bkp.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_can.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_cec.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_crc.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_dac.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_dbgmcu.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_dma.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_exti.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_fsmc.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_gpio.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_iwdg.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_pwr.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_rcc.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_rtc.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_sdio.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_spi.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_tim.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_usart.o"'
+### List of Objects: adding '".\stm32_high\stm32f10x_flash.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\stm32_high\main.o" ".\stm32_high\usb_pwr.o" ".\stm32_high\diskio.o" ".\stm32_high\ff.o" ".\stm32_high\hw_config.o" ".\stm32_high\key.o" ".\stm32_high\led.o" ".\stm32_high\mmc_sd.o" ".\stm32_high\nrf24l01.o" ".\stm32_high\queue.o" ".\stm32_high\rtc.o" ".\stm32_high\spi.o" ".\stm32_high\stm32f10x_it.o" ".\stm32_high\timer.o" ".\stm32_high\usart.o" ".\stm32_high\usb_desc.o" ".\stm32_high\usb_istr.o" ".\stm32_high\usb_prop.o" ".\stm32_high\vs1003b.o" ".\stm32_high\at24c02.o" ".\stm32_high\iic.o" ".\stm32_high\rs485.o" ".\stm32_high\can.o" ".\stm32_high\dac.o" ".\stm32_high\adc.o" ".\stm32_high\buzzer.o" ".\stm32_high\lcd43.o" ".\stm32_high\touch.o" ".\stm32_high\lcd70.o" ".\stm32_high\lcd.o" ".\stm32_high\icon.o" ".\stm32_high\font.o" ".\stm32_high\lcd28.o" ".\stm32_high\lcd12864.o" ".\stm32_high\lcd1602.o" ".\stm32_high\lcd32.o" ".\stm32_high\system_stm32f10x.o" ".\stm32_high\startup_stm32f10x_hd.o" ".\stm32_high\otgd_fs_cal.o" ".\stm32_high\otgd_fs_dev.o" ".\stm32_high\otgd_fs_int.o" ".\stm32_high\otgd_fs_pcd.o" ".\stm32_high\usb_core.o" ".\stm32_high\usb_init.o" ".\stm32_high\usb_int.o" ".\stm32_high\usb_mem.o" ".\stm32_high\usb_regs.o" ".\stm32_high\usb_sil.o" ".\stm32_high\stm32f10x_wwdg.o" ".\stm32_high\misc.o" ".\stm32_high\stm32f10x_adc.o" ".\stm32_high\stm32f10x_bkp.o" ".\stm32_high\stm32f10x_can.o" ".\stm32_high\stm32f10x_cec.o" ".\stm32_high\stm32f10x_crc.o" ".\stm32_high\stm32f10x_dac.o" ".\stm32_high\stm32f10x_dbgmcu.o" ".\stm32_high\stm32f10x_dma.o" ".\stm32_high\stm32f10x_exti.o" ".\stm32_high\stm32f10x_fsmc.o" ".\stm32_high\stm32f10x_gpio.o" ".\stm32_high\stm32f10x_iwdg.o" ".\stm32_high\stm32f10x_pwr.o" ".\stm32_high\stm32f10x_rcc.o" ".\stm32_high\stm32f10x_rtc.o" ".\stm32_high\stm32f10x_sdio.o" ".\stm32_high\stm32f10x_spi.o" ".\stm32_high\stm32f10x_tim.o" ".\stm32_high\stm32f10x_usart.o" ".\stm32_high\stm32f10x_flash.o" --library_type=microlib --strict --scatter ".\stm32_high\stm32_high.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\stm32_high\stm32_high.map" -o ".\stm32_high\stm32_high.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\stm32_high\stm32_high.axf'
+### ADS-LD Command File: '.\stm32_high\stm32_high.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\stm32_high\stm32_high.lnp', Handle=0x00000318
+### Writing '.lnp' file
+### ADS-LD Command file '.\stm32_high\stm32_high.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

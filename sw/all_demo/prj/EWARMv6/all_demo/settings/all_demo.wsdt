@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>stm32_high/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>302</Column0><Column1>0</Column1><Column2>27</Column2><Column3>0</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>453</ColumnWidth1><ColumnWidth2>321</ColumnWidth2><ColumnWidth3>30</ColumnWidth3></Build>
+    <Debug-Log><ColumnWidth0>19</ColumnWidth0><ColumnWidth1>1375</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-7197-12769</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>stm32_high</ExpandedNode><ExpandedNode>stm32_high/CMSIS</ExpandedNode><ExpandedNode>stm32_high/USB-FS-Device_Driver</ExpandedNode><ExpandedNode>stm32_high/User</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30881-26340</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-8931-21686</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>1</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\src\main.c</Filename><XPos>0</XPos><YPos>595</YPos><SelStart>16847</SelStart><SelEnd>16847</SelEnd></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\lib\STM32_USB-FS-Device_Lib_V3.4.0\Libraries\CMSIS\Device\ST\STM32F10x\Include\stm32f10x.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>524</SelStart><SelEnd>524</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-013663b8><key>iaridepm.enu1</key></Toolbar-013663b8></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>475</Bottom><Right>365</Right><x>-2</x><y>-2</y><xscreen>433</xscreen><yscreen>363</yscreen><sizeHorzCX>302374</sizeHorzCX><sizeHorzCY>500690</sizeHorzCY><sizeVertCX>256285</sizeVertCX><sizeVertCY>657931</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>205</Bottom><Right>1434</Right><x>-2</x><y>-2</y><xscreen>1436</xscreen><yscreen>207</yscreen><sizeHorzCX>1002793</sizeHorzCX><sizeHorzCY>285517</sizeHorzCY><sizeVertCX>302374</sizeVertCX><sizeVertCY>500690</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
