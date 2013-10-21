@@ -1,0 +1,1735 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>STM32F10x Dragon 개발보드 메뉴얼</title>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta name="keywords" content="arm11 board, arm11 kit, android board, android kit, arm processor, arm11 development board, arm kits, s3c6410 kit, s3c6410 board, s3c6410 devlopment kits, Android2.1 kit, s3c6410 android, wince 6.0, linux, gps gprs, camera, av" /> 
+<meta name="Description" content="arm11 board, arm11 kit, android board, android kit, arm processor, arm11 development board, arm kits, s3c6410 kit, s3c6410 board, s3c6410 devlopment kits, Android2.1 kit, s3c6410 android, wince 6.0, linux, gps gprs, camera, av" /> 
+
+
+<base target="_top">
+<style type="text/css"> 
+  
+ 
+/* default css */
+ 
+table {
+  font-size: 1em;
+  line-height: inherit;
+  border-collapse: collapse;
+}
+ 
+ 
+tr {
+  
+  text-align: left;
+  
+}
+ 
+ 
+div, address, ol, ul, li, option, select {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ 
+p {
+  margin: 0px;
+}
+ 
+ 
+pre {
+  font-family: Courier New;
+  white-space: pre-wrap;
+  margin:0;
+}
+ 
+body {
+  margin: 6px;
+  padding: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 10pt;
+  background-color: #ffffff;
+  color: #000;
+}
+ 
+ 
+img {
+  -moz-force-broken-image-icon: 1;
+}
+ 
+@media screen {
+  html.pageview {
+    background-color: #f3f3f3 !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+ 
+  
+ 
+  body {
+    min-height: 1100px;
+    
+    counter-reset: __goog_page__;
+  }
+  
+  * html body {
+    height: 1100px;
+  }
+  /* Prevent repaint errors when scrolling in Safari. This "Star-7" css hack
+     targets Safari 3.1, but not WebKit nightlies and presumably Safari 4.
+     That's OK because this bug is fixed in WebKit nightlies/Safari 4 :-). */
+  html*#wys_frame::before {
+    content: '\A0';
+    position: fixed;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .pageview body {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+    width: 648px !important;
+    margin: 15px auto 25px;
+    padding: 40px 50px;
+  }
+  /* IE6 */
+  * html {
+    overflow-y: scroll;
+  }
+  * html.pageview body {
+    overflow-x: auto;
+  }
+  
+ 
+  
+    
+    
+    .writely-callout-data {
+      display: inline-block;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      margin-left: -1px;
+    }
+    
+ 
+    .writely-footnote-marker {
+      background-image: url('MISSING');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      width: 7px;
+      overflow: hidden;
+      height: 16px;
+      vertical-align: top;
+ 
+      
+      -moz-user-select: none;
+    }
+    .editor .writely-footnote-marker {
+      cursor: move;
+    }
+    .writely-footnote-marker-highlight {
+      background-position: -15px 0;
+      -moz-user-select: text;
+    }
+    .writely-footnote-hide-selection ::-moz-selection, .writely-footnote-hide-selection::-moz-selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection ::selection, .writely-footnote-hide-selection::selection {
+      background: transparent;
+    }
+    .writely-footnote-hide-selection {
+      cursor: move;
+    }
+ 
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+ 
+  
+ 
+ 
+  
+  .br_fix span+br:not(:-moz-last-node) {
+    
+    position:relative;
+    
+    left: -1ex
+    
+  }
+ 
+  
+  #cb-p-tgt {
+    font-size: 8pt;
+    padding: .4em;
+    background-color: #ddd;
+    color: #333;
+  }
+  #cb-p-tgt-can {
+    text-decoration: underline;
+    color: #36c;
+    font-weight: bold;
+    margin-left: 2em;
+  }
+  #cb-p-tgt .spin {
+    width: 16px;
+    height: 16px;
+    background: url(//ssl.gstatic.com/docs/clipboard/spin_16o.gif) no-repeat;
+  }
+}
+ 
+h6 { font-size: 8pt }
+h5 { font-size: 8pt }
+h4 { font-size: 10pt }
+h3 { font-size: 12pt }
+h2 { font-size: 14pt }
+h1 { font-size: 18pt }
+ 
+blockquote {padding: 10px; border: 1px #DDD dashed }
+ 
+.webkit-indent-blockquote { border: none; }
+ 
+a img {border: 0}
+ 
+.pb {
+  border-width: 0;
+  page-break-after: always;
+  /* We don't want this to be resizeable, so enforce a width and height
+     using !important */
+  height: 1px !important;
+  width: 100% !important;
+}
+ 
+.editor .pb {
+  border-top: 1px dashed #C0C0C0;
+  border-bottom: 1px dashed #C0C0C0;
+}
+ 
+div.google_header, div.google_footer {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+ 
+ 
+/* Table of contents */
+.editor div.writely-toc {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+}
+.writely-toc > ol {
+  padding-left: 3em;
+  font-weight: bold;
+}
+ol.writely-toc-subheading {
+  padding-left: 1em;
+  font-weight: normal;
+}
+/* IE6 only */
+* html writely-toc ol {
+  list-style-position: inside;
+}
+.writely-toc-none {
+  list-style-type: none;
+}
+.writely-toc-decimal {
+  list-style-type: decimal;
+}
+.writely-toc-upper-alpha {
+  list-style-type: upper-alpha;
+}
+.writely-toc-lower-alpha {
+  list-style-type: lower-alpha;
+}
+.writely-toc-upper-roman {
+  list-style-type: upper-roman;
+}
+.writely-toc-lower-roman {
+  list-style-type: lower-roman;
+}
+.writely-toc-disc {
+  list-style-type: disc;
+}
+ 
+/* Ordered lists converted to numbered lists can preserve ordered types, and
+   vice versa. This is confusing, so disallow it */
+ul[type="i"], ul[type="I"], ul[type="1"], ul[type="a"], ul[type="A"] {
+  list-style-type: disc;
+}
+ 
+ol[type="disc"], ol[type="circle"], ol[type="square"] {
+  list-style-type: decimal;
+}
+ 
+/* end default css */
+ 
+ 
+  /* default print css */
+  @media print {
+    body {
+      padding: 0;
+      margin: 0;
+    }
+ 
+    div.google_header, div.google_footer {
+      display: block;
+      min-height: 0;
+      border: none;
+    }
+ 
+    div.google_header {
+      flow: static(header);
+    }
+ 
+    /* used to insert page numbers */
+    div.google_header::before, div.google_footer::before {
+      position: absolute;
+      top: 0;
+    }
+ 
+    div.google_footer {
+      flow: static(footer);
+    }
+ 
+    /* always consider this element at the start of the doc */
+    div#google_footer {
+      flow: static(footer, start);
+    }
+ 
+    span.google_pagenumber {
+      content: counter(page);
+    }
+ 
+    span.google_pagecount {
+      content: counter(pages);
+    }
+ 
+    .endnotes {
+      page: endnote;
+    }
+ 
+    /* MLA specifies that endnotes title should be 1" margin from the top of the page. */
+    @page endnote {
+      margin-top: 1in;
+    }
+ 
+    callout.google_footnote {
+      
+      display: prince-footnote;
+      footnote-style-position: inside;
+      /* These styles keep the footnote from taking on the style of the text
+         surrounding the footnote marker. They can be overridden in the
+         document CSS. */
+      color: #000;
+      font-family: Verdana;
+      font-size: 10.0pt;
+      font-weight: normal;
+    }
+ 
+    /* Table of contents */
+    #WritelyTableOfContents a::after {
+      content: leader('.') target-counter(attr(href), page);
+    }
+ 
+    #WritelyTableOfContents a {
+      text-decoration: none;
+      color: black;
+    }
+ 
+    /* Comments */
+    .writely-comment-yellow {
+      background-color: #ffffd7;
+    }
+    .writely-comment-orange {
+      background-color: #ffe3c0;
+    }
+    .writely-comment-pink {
+      background-color: #ffd7ff;
+    }
+    .writely-comment-green {
+      background-color: #d7ffd7;
+    }
+    .writely-comment-blue {
+      background-color: #d7ffff;
+    }
+    .writely-comment-purple {
+      background-color: #eed7ff;
+    }
+  }
+ 
+  @page {
+    @top {
+      content: flow(header);
+    }
+    @bottom {
+      content: flow(footer);
+    }
+    @footnotes {
+      border-top: solid black thin;
+      padding-top: 8pt;
+    }
+  }
+  /* end default print css */
+ 
+ 
+/* custom css */
+ 
+a {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: red;
+}
+a:visited {
+  text-decoration: none;
+  color: green;
+}
+ 
+/* end custom css */
+ 
+/* ui edited css */
+ 
+body {
+  font-family: Verdana;
+  
+  font-size: 10.0pt;
+  line-height: normal;
+  background-color: #ffffff;
+}
+/* end ui edited css */
+ 
+ 
+/* editor CSS */
+.editor a:visited {color: #551A8B}
+.editor table.zeroBorder {border: 1px dotted gray}
+.editor table.zeroBorder td {border: 1px dotted gray}
+.editor table.zeroBorder th {border: 1px dotted gray}
+ 
+ 
+.editor div.google_header, .editor div.google_footer {
+  border: 2px #DDDDDD dashed;
+  position: static;
+  width: 100%;
+  min-height: 2em;
+}
+ 
+.editor .misspell {background-color: yellow}
+ 
+.editor .writely-comment {
+  font-size: 9pt;
+  line-height: 1.4;
+  padding: 1px;
+  border: 1px dashed #C0C0C0
+}
+.style5 {color: #FF0000}
+.style10 {font-size: 9px; color: #000000; }
+.style11 {color: #000000}
+.style13 {font-size: 9px; color: #999999; }
+.style15 {color: #FF0000; font-weight: bold; }
+.style16 {
+	color: #0000FF;
+	font-weight: bold;
+}
+.style17 {color: #0000FF}
+.style19 {color: #0000ff}
+</style>
+</head>
+
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="2">
+  <tr> 
+    <td width="3%">&nbsp;</td>
+    <td width="3%">&nbsp;</td>
+    <td width="58%">&nbsp;</td>
+    <td width="36%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="3"><em><br>
+      이 매뉴얼은 <span class="style5">JK전자(JK Electronics)</span> 에 의해서 번역, 수정, 작성 되었고 소유권 또한 <span class="style5"><br>
+JK전자(JK Electronics)</span>의 것입니다. 
+소유권자의 허가를 받지 않고 무단으로 수정, 삭제하거나 배포 할 수 없습니다.<br>
+
+<br>
+<!--<BUY_TAG></BUY_TAG>-->
+<br>  
+
+    <br>
+    </em></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="3"><hr><div align="center">
+      <h2>STM32F10x Dragon 개발보드 메뉴얼</h2>
+    </div><hr></td>
+  </tr>
+  <tr> 
+    <td>&nbsp; </td>
+    <td colspan="3"><strong><br>
+      </strong>* Update history<br>
+      <br>
+      - 2012.9.17<strong></strong> : 초기 Release<br>      
+      &nbsp;&nbsp;2012.9.17 S/W 업데이트<br>
+      <br>
+      <hr></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="3"><br>
+      <a href="#1">1. STM32F10x Drgaon 개발보드 소개</a><br>
+      <a href="#2">2. STM32F10x Dragon 개발보드 사양</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.1">2.1 CPU보드의 H/W 구성 및 회로도</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.2">2.2 Bottom 보드의 H/W 구성 및 회로도</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#2.3">2.3 제공 S/W 사양</a><br>
+      <a href="#3">3. 기본 사용방법 및 다운로드 가이드</a> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#3">3.1 Dragon 개발보드 기본사용 방법</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#3.2">3.2 프로그램 다운로드 가이드</a><br>
+      <a href="#4">4. S/W 테스트 방법</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.1">4.1 LED</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.2">4.2 Timer</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.3">4.3 RTC</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.4">4.4 SD Memory(FAT32)</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.5">4.5 USB( HID Mouse )</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.6">4.6 LCD Display</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.7">4.7 LCD Touch</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.8">4.8 KEY 입력 테스트</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.9">4.9 nRF24L01(RF Test)</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#4.10">4.10 OV7670 CMOS 카메라 테스트</a><br>
+      <a href="#5">5. 프로그래밍 가이드 </a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#5.1">5.1 Keil MDK 4.2x</a><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a href="#5.2">5.2 IAR Workbench 6.x</a><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<a href="#5.3">5.3 RIDE7 </a><br>
+    <br>
+    <br>
+    <hr></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td colspan="3"><A id="1"></A>
+    <h4>1.   STM32F10x Dragon 개발보드 소개</h4>
+      STM32 Cortex-M3 에 기반한 32bit ARM 개발보드로 STM32F10x MCU를 사용하여 최대 72 MHz <br>
+      속도로 동작 하고 CPU모듈과 Bottom보드가 분리되어 있습니다. Dragon Bottom 보드에는 <br>
+      nRF24L01 2.4Hz RF 모듈, MP3모듈, 조도센서, 온도센서 등과 2.8, 3.2, 4.3, 7.0 인치의 TFT 터치 LCD,<br>
+      1602, 12864 LCD 등의 다양한 주변장치를 연결해서 사용할 수 있습니다.<br>
+<br>
+(1) STM32F10x Dragon 개발보드 제품의 종류<br>
+        <br>
+        <table width="750" border="0" cellpadding="8" cellspacing="1" bgcolor="#333366">
+          <tr bordercolor="#0099ff" bgcolor="#ffffff">
+            <td width="108" height="29" align="left"><div align="center">핀 사양별 분류</div></td>
+            <td width="198"><div align="center">제품이름</div></td>
+            <td width="392"><div align="center">제품 기본 사양</div></td>
+          </tr>
+          <tr bordercolor="#0099ff" bgcolor="#ffffff">
+            <td height="33" align="left">LQFP100</td>
+            <td>            STM32F103VCT6  개발보드</td>
+            <td>            Internal 256KB Flash, 48KB SRAM</td>
+          </tr>
+          <tr bordercolor="#0099ff" bgcolor="#ffffff">
+            <td height="32" align="left">LQFP144</td>
+            <td>STM32F103ZET6  개발보드</td>
+            <td>Internal 512KB Flash, 64KB SRAM</td>
+          </tr>
+        </table>
+        <br><font color="#0000FF">
+        STM32 Dragon 개발보드는 CPU모듈로 STM32F10x Rabbit CPU 모듈을 사용하였습니다.<br>
+        고속의 LCD인터페이스를 위해 FSMC 인터페이스를 사용하여 Rabbit CPU 모듈중 High Density CPU 모듈만 지원하고 있습니다. </font><br>
+        <br>
+        <A name="2" id="12"></A><br>
+      <h3>2. STM32F10x Dragon 개발보드 사양</h3>
+        <h4><A name="2.1" id="122"></A>2.1 CPU보드의 H/W 구성 및 회로도</h4>
+    (1) LQFP100 시리즈 H/W 구성( STM32F10x Rabbit CPU 모듈을 사용하였습니다.) <br>
+        <br>
+        <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/rabbit_cpu_lqfp64_5.jpg" alt="stm32" ><br>
+        <br>
+        <br>
+* LQFP100 시리즈 핀맵<br>
+<br>
+<table width="769" border="0" cellspacing="1" bgcolor="#333366" cellpadding="0">
+  <tr>
+    <td colspan="2" rowspan="4" align="center" bgcolor="#FF9999"><span class="style11">JTAG</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB8</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB6</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB4</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD5</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD3</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC12</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC10</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC14</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB5</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB3</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD6</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD4</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD2</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC11</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA15</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE2</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE3</span></td>
+    <td width="40" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="46" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="35" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE4</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE5</span></td>
+    <td width="40" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="46" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="35" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA13</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA12</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">JTRST</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td width="39" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td width="40" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE6</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VBAT</span></td>
+    <td width="40" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="46" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="35" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="40" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA11</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA10</span></td>
+  </tr>
+  <tr>
+    <td width="40" align="center" bgcolor="#FFFFFF"><span class="style10">JTDI</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC13</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC14</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="46" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="35" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA8</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">JTMS</span></td>
+    <td width="40" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC15</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC8</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">JTCK</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC6</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">NC</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC2</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD15</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD14</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">JTDO</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC3</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VSSA</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD13</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD12</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">RESET</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VREF-</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VREF+</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD11</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD10</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">NC</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VDDA</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD8</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">NC</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA2</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB15</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB14</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB13</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB12</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA4</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA6</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC4</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB2</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE8</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE10</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE12</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE14</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB10</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA3</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA5</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC5</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE11</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE13</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE15</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB11</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+</table>
+<br>
+(2) LQFP144 시리즈 H/W 구성( STM32F10x Rabbit CPU 모듈을 사용하였습니다.)<br>
+<br>
+<img src="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp144/rabbit_cpu_lqfp144_5.jpg" alt="stm32" ><br>
+<br>
+* LQFP144 시리즈 핀맵<br>
+<table width="849" border="0" cellspacing="1" bgcolor="#333366" cellpadding="0">
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PF1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF3</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF5</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF11</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF13</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF15</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PG14</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG12</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG10</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG8</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PG6</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG4</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG2</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG0</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PF0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF2</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF4</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF6</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF8</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF10</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF12</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PF14</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PG15</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG13</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG11</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PG7</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG5</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG3</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">PG1</span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td colspan="2" rowspan="4" align="center" bgcolor="#FF9999"><span class="style11">JTAG</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB8</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB6</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB4</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD5</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD3</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC12</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC10</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC14</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB5</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB3</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD6</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD4</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD2</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC11</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA15</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE2</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE3</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE4</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE5</span></td>
+    <td width="40" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="46" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="35" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA13</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA12</span></td>
+    <td width="39" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">JTRST</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td width="39" align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td width="40" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE6</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VBAT</span></td>
+    <td width="40" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="46" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="35" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="40" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA11</span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA10</span></td>
+    <td width="39" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td width="40" align="center" bgcolor="#FFFFFF"><span class="style10">JTDI</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC13</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC14</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="46" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="35" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td width="39" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA8</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">JTMS</span></td>
+    <td width="40" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC15</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC8</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">JTCK</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC6</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">NC</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC2</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD15</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD14</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">JTDO</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC3</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VSSA</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD13</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD12</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">RESET</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VREF-</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VREF+</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD11</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD10</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">NC</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VDDA</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PD8</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">NC</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA2</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB15</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB14</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB13</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB12</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA4</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA6</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC4</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB0</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB2</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE8</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE10</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE12</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE14</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB10</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">GND</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+  <tr>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#CCCCCC"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA3</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA5</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PA7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PC5</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB1</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE7</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE9</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE11</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE13</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PE15</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">PB11</span></td>
+    <td height="20" align="center" bgcolor="#FFFFFF"><span class="style10">VCC</span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+    <td align="center" bgcolor="#FFFFFF"><span class="style11"></span></td>
+  </tr>
+</table>
+<br>
+        <h4><A name="2.2" id="1222"></A>2.2 Bottom 보드의 H/W 구성 및 회로도</h4>
+    (1) Bottom 보드 H/W 구성<br>
+        <br>
+        <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/img/23.jpg" alt="" border="0"><br>
+        <br>
+        <br>
+<a href="http://www.deviceshop.net/front/php/b/board_read_new.php?board_no=7&no=174&number=8&offset=0&page=1&is_reply_sort=&search_key=&search=&search_date=month" target="_blank">* STM32F10X Dragon 개발보드 회로도 다운로드</a><br>
+        <br>
+        <h4><A name="2.3" id="1223"></A>2.3 제공 S/W 사양</h4>
+        <p>ST Micronics(<a href="http://www.st.com" target="_blank">http://www.st.com</a>)사에서 제공하는 기본 STM32F10x_StdPeriph_Driver, STM32_USB-FS-Device_Driver<br>
+          를 사용해서 작성되어졌습니다. <br>
+          LED, Timer, RTC, USB,  RF(nRF24L01), MP3(VS1003B), 2.8, 3.2, 4.3, 7.0 터치 LCD, AT24C02 EEPROM, RS485, RS232,<br>
+          CAN 통신, ADC, DAC, 1602 Char LCD, 12864 그랙픽 LCD, Buzzer, 온도센서, 조도센서
+          등 샘플 예제를 제공 합니다.<br>
+          IAR Workbench, Keil MDK, Ride7 에서 컴파일한 소스와 프로젝트 파일이 있습니다.<br>
+  <br>
+          (1) 소프트웨어 디렉토리<br>
+          <br>
+      </p>
+      <table width="700" border="0" cellpadding="8" cellspacing="1" bgcolor="#333366">
+  <tr bordercolor="#0099ff" bgcolor="#ffffff">
+    <td width="96" height="29" align="left">prj</td>
+    <td width="268" bordercolor="#333333" bgcolor="#FFFFFF">EWARMv6<br>
+      MDK-ARM<br>
+      RIDE</td>
+    <td width="284" bordercolor="#333333" bgcolor="#FFFFFF">IAR Embeded Workbench Version 6.x<br>
+      RealView(Keil) MDK-ARM Version 4.2x<br>
+      Raisonance's Ride7 Version 7.24.06.0251</td>
+  </tr>
+  <tr bordercolor="#0099ff" bgcolor="#ffffff">
+    <td height="33" align="left">lib</td>
+    <td bordercolor="#333333" bgcolor="#FFFFFF">STM32_USB-FS-Device_Lib_V3.4.0</td>
+    <td bordercolor="#333333" bgcolor="#FFFFFF">ST's 표준 라이브러리</td>
+  </tr>
+  <tr bordercolor="#0099ff" bgcolor="#ffffff">
+    <td height="32" align="left">src</td>
+    <td bordercolor="#333333" bgcolor="#FFFFFF">&nbsp;</td>
+    <td bordercolor="#333333" bgcolor="#FFFFFF">예제 샘플 코드</td>
+  </tr>
+</table>
+<br>
+(2) STM32 표준 라이브러리 버젼 : STM32_USB-FS-Device_Driver_V3.4.0, STM32F10x_StdPeriph_Driver_V3.4.0<br>
+(3) 소프트웨어 소스 다운로드<br>
+<br>
+- <a href="http://www.deviceshop.net/front/php/b/board_read_new.php?board_no=7&no=175&number=9&offset=0&page=1&is_reply_sort=&search_key=&search=&search_date=month" target="_blank">2012.9.17 통합 데모 소스 다운로드</a><br>
+        <br>
+        <h3><A name="3" id="1224"></A>3. 기본 사용방법 및 다운로드 가이드</h3>
+      <h4>3.1 Dragon 개발보드 기본사용 방법</h4>
+    (1) CPU모듈 사용방법<br>
+        <br>
+      CPU모듈에는 UART통신과 전원 공급을 하기 위해서는 4Pin 커넥터가 나와 있습니다. <br>
+        <br>
+        <p>-  USB2Uart 다운로더 for Rabbit  을 이용해서 PC와 시리얼 통신 연결<br>
+          <br>
+            <br>
+            <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/images/pc_core1.jpg" alt="stm32f103rbt6" ><br>
+            <br>
+        -  일반적인 USB2Serial 변환 케이블을 이용해서 PC와 시리얼 통신 연결<br>
+        <br>
+        일반적인 USB2Serial 변환 케이블을 이용할 경우에는 아래 그림과 같이 4개의 핀을 CPU모듈에 커넥터로 연결해서<br>
+        사용하면 됩니다.</p>
+        <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/images/pc_core2.jpg" alt="stm32f103rbt6" ><br>
+        <br>
+        (2) Bottom보드 사용방법<br>
+        Bottom 보드에는 USB to Serial 포트가 이미 내장되어 있어서 PC에는 Mini USB케이블을 이용해서 연결하시면 됩니다.<br>
+        USB포트를 통해서 전원공급도 같이 할 수 있습니다.<br>
+        <br>
+    <a href="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/stm32f10x_pl2303_usbdriver.html" target="_blank">(3) PC용 USB to Serial 드라이버 다운로드 및 설치( 새창 )</a><br>
+        <br>
+<a href="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/stm32f10x_hyper_terminal.html" target="_blank">(4) 하이퍼 터미널 설정</a><br>
+        <br>
+      PC와 연결이 성공적으면 하이퍼 터미널을 통해서 아래와 같은 메세지를 확인 할 수 있습니다.<br>
+      <br>
+      <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/man_01.jpg" alt="stm32f103rbt6" width="698" height="734" ><br>
+      <br>
+      또한 CPU모듈의 USER LED(녹색)가 켜지는 것을 볼 수 있습니다. <br>
+      <br>
+      <h4><A name="3.2" id="1225"></A>3.2 프로그램 다운로드 가이드</h4>
+  * 프로그램 다운로드 가이드는 STM32F10x Rabbit 개발보드를 기준으로 설명 하였습니다.<br>
+   Dragon 개발보드에서 STM32F10x Rabbit CPU 모듈을 사용하고 있기 때문에 다운로드하는 방법은 동일 합니다. <br>
+  <br>
+  <a href="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/rabbit_stm32_isp_download.html" target="_blank">(1) 시리얼 통신을 이용한 방법(새창)</a><br>
+STM32F 시리즈에는 JTAG 다운로더가 없이 USART0 포트를 이용해서 프로그램을 다운로드 할 수 있는 ISP기능을 제공 합니다.<br>
+가장 비용이 적게드는 장점이 있지만 다운로드만 가능하고 코드 디버깅은 할 수 없습니다.<br>
+<br>
+<p><a href="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/hjtag_manual.html" target="_blank">(2) H-JTAG 을 이용한 방법(새창)</a></p>
+<p>Keil MDK, IAR Workbench 에서 H-JTAG을 이용한 다운로드 방법과 디버깅 방법<br>
+    <br>
+        <a href="http://www.jkelec.co.kr/img/jtag/arm/armjtag/arm_jtag_iar.html" target="_blank">(3) ARM-JTAG 을 이용한 방법(IAR Workbench)</a>, <a href="http://www.jkelec.co.kr/img/jtag/arm/armjtag/arm_jtag_keil.html" target="_blank">KEIL MDK</a> </p>
+<p>Keil MDK, IAR Workbench 에서 ARM-JTAG을 이용한 다운로드 방법과 디버깅 방법
+  <br>
+  <br>
+  <a href="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/st_link_manual.html" target="_blank">(4) ST-Link 를 이용한 방법(새창)</a></p>
+<p>Keil MDK, IAR Workbench 에서 ST-Link를 이용한 다운로드 방법과 디버깅 방법
+      <br>
+      <br>
+      <a href="http://www.jkelec.co.kr/img/arm/cortex-m3/core_stm32_lqfp64/core_stm32f10x_manual_ride7.htm" target="_blank">(5) RLink 를 이용한 방법 (새창)</a><br>
+  RIDE7 에서 RLink를 이용한 다운로드 방법<br>
+  <br>
+  <a href="http://www.jkelec.co.kr/img/arm/cortex-m3/core_stm32_lqfp64/core_stm32f10x_manual_ride7.htm" target="_blank">(6) </a><a href="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/j_link_manual.html" target="_blank">J-Link EDU 를 이용한 방법 </a><br>
+IAR Workbench 에서 J-Link EDU 를 이용한 다운로드 방법(새창)</p>
+<br>
+<h3><A name="4" id="1226"></A>4. S/W 테스트 방법</h3>
+<h4><A name="4.1" id="1227"></A>4.1 LED</h4>
+<img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/man_03.jpg" alt="stm32f103rbt6" width="559" height="327" ><br>
+<br>
+[1] User LED on : CPU모듈의 노란색 USER LED와 Bottom 보드의 노란색 USER LED 3개가 모두 켜집니다.<br>
+[2] User LED off : CPU모듈의 노란색 USER LED와 Bottom 보드의 노란색 USER LED 3개가 모두  꺼집니다.<br>
+<br>
+<h4><A name="4.2" id="1228"></A>4.2 Timer</h4>
+<img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/man_04.jpg" alt="stm32f103rbt6" width="559" height="327" ><br>
+<br>
+[1] TIM2 ticktime test : CPU모듈의 노란색 USER LED가 1초간텩으로 깜빡 입니다. <br>
+[2] TIM2 blink stop : 1초 타이머가 종료 됩니다. <br>
+<h4><A name="4.3" id="12282"></A>4.3 RTC</h4>
+ <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/man_05.jpg" alt="stm32f103rbt6" width="559" height="327" ><br>
+<br>
+[1] RTC service start : RTC 인터럽트를 받아서 1초에 한번씩 시간을 표시해 주고 있습니다.<br>
+<br>
+<img src="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/images/hyper_14.jpg" alt="stm32f103rbt6" ><br>
+<br>
+[2] RTC service stop : RTC 서비스가 종료 됩니다. <br>
+코어모듈에서는 RTC 백업 베터리가 없어서
+
+현재의 시간 설정이 저장되지는 않습니다.
+<br>
+<br>
+<h4><A name="4.4" id="12283"></A>4.4 SD Memory(FAT32)</h4>
+<p>FAT32 파일 시스템을 지원하여 SD메모리에 접근 할 수 있습니다. MP3 Player 구현 에서도 반드시 필요한 기능 입니다.<br>
+  모든 종류의 SD Memory 카드를 지원하지는 않습니다. 
+  SD 메모리 카드의 종류에 따라서 동작이 되지 않을 수도 있으며, <br>
+  이부분은 테스트가 완료된 SD메모리 카드를 계속해서 업데이트해 드리도록 하겠습니다.<br>
+  가능 하시면 2GB SD메모리를 사용하기를 권장해 드립니다. 테스트가 완료된 SD메모리 카드는 다음과 같습니다.</p>
+<p>- 도시바 2GB, 8GB Memory<br>
+  - SanDisk 2GB 메모리</p>
+<p><br>
+   SD 메모리 테스트를 위해서 SD 메모리를 개발보드의 소켓에 삽입 합니다. </p>
+<br>
+<img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/man_06.jpg" alt="stm32f103rbt6" width="559" height="327" ><br>
+<br>
+[1] SD File List : SD메모리의 파일을 리스트로 보여 줍니다.<br>
+<br>
+<img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/man_21.jpg" alt="stm32f103rbt6" width="560" height="262" ><br>
+<br>
+[x] Exit SD test : 테스트를 종료하고 메인 메뉴로 이동 합니다.<br>
+<br>
+<h4><A name="4.5" id="12284"></A>4.5 USB( HID Mouse )</h4>
+ USB 디바이스 테스트를 위해서는  Dragon Bottom 가 필요 합니다. Bottom보드의 USB to Serial 포트가 연결되어 있는<br>
+ 상태에서 USB to Serial 포트 옆에 있는 USB Mini포트를 PC와 연결 합니다. <br>
+<br>
+[1] USB service start : USB 서비스가 시작이 되면 아래 그림과 같이 장치관리자에 "HID 규격 마우스" 로 잡히게 됩니다. <br>
+<br>
+<img src="http://www.jkelec.co.kr/img/arm/cortex-m3/core_stm32_lqfp64/images/hp_6.jpg" alt="stm32f103rbt6"><br>
+<br>
+하이퍼터미널에서 &quot;L&quot;, &quot;R&quot;, &quot;U&quot;, &quot;D&quot; 등을 입력하면
+PC의 마우스 커서가 움직이게 됩니다.<br>
+<br>
+<img src="http://www.jkelec.co.kr/img/arm/cortex-m3/core_stm32_lqfp64/images/stm32_hyper_5.jpg" alt="stm32f103rbt6"><br>
+<br>
+[2] USB service stop : USB 서비스를 종료 합니다. <br>
+<h4><A name="4.6" id="12285"></A>4.6 LCD Display</h4>
+(1) 하이퍼터미널 에서 &quot;6&quot; 을 입력하면 LCD 예제가 나옵니다. 
+<br>
+<br>
+<img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/man_08.jpg" alt="stm32f103rbt6" width="559" height="422" ><br>
+<br>
+Dragon 개발보드는 2.8, 3.2, 4.3, 7.0 인치 터치 LCD를 FSMC 고속 인터페이스로 지원하고 있습니다.<br>
+4.3인치(480*272), 7.0인치(
+800*480) 해상도 에서 화면 갱신속도가 3.2인치( 320*240 ) 갱신속도와 비슷 합니다. <br>
+테스트 방법은 구매하신 LCD에 맞는 메뉴를 하이퍼 터미널에서 선택만 하면 됩니다. 동작 화면은 아래 동영상 참조 하시기 바랍니다.  <br>
+<br>
+* 4.3인치 터치 LCD 테스트 영상 <br>
+<br>
+<iframe width="720" height="438" src="http://serviceapi.nmv.naver.com/flash/convertIframeTag.nhn?vid=CC46C60DA19DCE32ED40E77B8BF50C066627&outKey=V129b9d3f2390b3d0ebcb788e63201f8d332e0d647b1e3119b5ce788e63201f8d332e" frameborder="no" scrolling="no"></iframe>
+<br>
+<br>
+* 7.0인치 터치 LCD 테스트 영상 <br>
+<br>
+<iframe width="720" height="438" src="http://serviceapi.nmv.naver.com/flash/convertIframeTag.nhn?vid=0A67EE3ED2A83336767B706A1D230795BFD7&outKey=V12103907c73b8edd06f4d3b32d2f617ec61bdaf9ad78b8522d41d3b32d2f617ec61b" frameborder="no" scrolling="no"></iframe>
+<br>
+<br>
+<h4><A name="4.7" id="12287"></A>4.8 EEPROM 입력 테스트<br>
+  <br>
+  <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/man_09.jpg" alt="stm32f103rbt6" width="559" height="301" ></h4>
+<p>[1] EEPROM(AT24C02) Write : AT24C02 EEPROM에 Data를 Write 합니다.<br>
+</p>
+<p><img src="http://www.jkelec.co.kr/img/ucom/avr/avr_rabbit/m128_test_16.jpg" alt="stm32f103rbt6" width="515" height="297" ><br>
+</p>
+<p>[2] EEPROM(AT24C02) Read : AT24C02 EEPROM에서 Data를 Read 합니다.<br>
+  <br>
+  <img src="http://www.jkelec.co.kr/img/ucom/avr/avr_rabbit/m128_test_24.jpg" alt="stm32f103rbt6" width="515" height="297" ></p>
+<p>&nbsp;</p>
+<p>[x] Exit EEPROM test</p>
+<br>
+    <br>
+    <h4><A name="4.8" id="12287"></A>4.9 KEY 입력 테스트</h4>
+ Dragon 개발보드에는 총 7개의 User KEY가 있습니다. 이 중에서 BTN1 ~ BTN5까지의 KEY 입력 테스트를 해보도록 하겠습니다.<br>
+ 참고로  
+ BTN1 ~ BTN4는 Polling 방식으로 KEY입력을 검사 하였고 BTN5는 EXTI(외부 인터럽트) 방식으로 검사 하였습니다. <br>
+    <br>
+    <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/man_10.jpg" alt="stm32f103rbt6" width="559" height="301" ><br>
+    <br>
+    [1] KEY service start(polling &amp; exti)<br>
+    <br>
+    <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/stm32_dragon/man_22.jpg" alt="stm32f103rbt6" width="561" height="539" ><br>
+    <br>
+    [2] KEY service stop(polling &amp; exti) : KEY 입력 서비스를 종료 합니다. <br>
+    <br>
+    <h4><A name="4.9" id="12288"></A>4.9 nRF24L01(RF Test)</h4>
+<p>(1) 하이퍼터미널 에서 &quot;9&quot; 을 입력하면 nRF24L01 테스트  예제가 나옵니다. 
+  RF테스트를 위해서는 2세트의 Rabbit개발보드가<br>
+  필요 합니다. 1세트에서 우선 &quot;1&quot; 을 입력해서 RX 모드로 진입을 한다음, 다른 세트에서 &quot;2&quot; 번 메뉴을 이용해서 TX데이터를<br>
+  보냅니다. 그러면 RX모드의 Rabbit개발보드와 연결된 터미널 창에 &quot;abcdef&quot; 라는 데이터가 도착되었을을 표시 합니다.<br>
+  <br>
+  <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/images/hyper_12.jpg" alt="stm32f103rbt6" width="300" ></p>
+<h4><A name="4.10" id="12289"></A>4.10 OV7670 CMOS 카메라 테스트</h4>
+<p>(1) 하이퍼터미널 에서 &quot;a&quot; 을 입력하면 카메라 테스트  예제가 나옵니다. 
+  &quot;1&quot; 을 입력하면 개발보드의 LCD화면상에 Camera<br>
+  Preview동작이 시작 됩니다.<span class="style15"> Preview동작중에 Key1(Bottom 보드에 있는 USER KEY) 을 누르면 Preview동작을 멈추고<br>
+  SD메모리에 BMP 파일로 저장을 합니다.</span><br>
+  <br>
+  <span class="style16">OV7670 카메라 모듈은 LQFP100 모듈 이상에서만 사용 하실 수 있습니다.</span><br>
+  <br>
+  <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/images/hyper_13.jpg" alt="stm32f103rbt6" width="300" > <img src="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/images/camera_1.jpg" alt="stm32f103rbt6" width="300" ></p>
+<h4><br>
+</h4>
+<H3><A name="5" id="5"></A>5. 프로그래밍 가이드</H3>
+컴파일을 하기 위해서는 제품 코어별로 predeifne 설정을 해야 합니다. define 설정에 관해서는 아래 표를 참조하시고<br>
+컴파일러별 설정 방법은 아래 컴파일러별 설정가이드를 참조하세요.<br>
+<A name="s1" id="s1"></A><br>
+<span class="style15">Rabbit 개발보드는  LQFP64에서 LCD를 제어하기 위해서 JTAG포트를 일반  GPIO포트로 활용하고 있습니다. 그래서 부팅시에 JTAG<br>
+모드 대신에 SWD모드(JTAG_Set(SWD_ENABLE))로 전환해서 사용하고 있습니다. 사용하시는 JTAG장비가 SWD모드를 지원한다면<br>
+장비의 디버그 모드를 SWD모드로 설정해서 사용하시기 바랍니다. 사용하시는 JTAG장비가 SWD모드를 지원하지 않는다면 CPU모듈의 <br>
+점퍼를 ISP모드롤 전환한 후 Reset한 이후에 JTAG 장비를 이용해서 다운로드 하시기 바랍니다.</span><br>
+<br>
+<a href="http://www.jkelec.co.kr/img/arm/cortex-m3/rabbit_stm32_lqfp64/keil_ulink_swd.html" target="_blank">(1) JTAG장비별 SWD모드 세팅 방법(새창)</a><br>
+<br>
+<table width="750" border="0" cellpadding="8" cellspacing="1" bgcolor="#333366">
+  <tr bordercolor="#0099ff" bgcolor="#ffffff">
+    <td width="108" height="29" align="left"><div align="center">핀 사양별 분류</div></td>
+    <td width="198"><div align="center">제품이름</div></td>
+    <td width="392"><div align="center">predfine 설정</div></td>
+  </tr>
+  <tr bordercolor="#0099ff" bgcolor="#ffffff">
+    <td height="29" align="left">LQFP64</td>
+    <td>STM32F103R8T6  코어모듈<br>
+      STM32F103RBT6  코어모듈<br>
+      STM32F105RBT6  코어모듈<br>
+      STM32F107RBT6  코어모듈</td>
+    <td>USE_STDPERIPH_DRIVER, STM32F10X_MD<br>
+      USE_STDPERIPH_DRIVER, STM32F10X_MD<br>
+      USE_STDPERIPH_DRIVER, STM32F10X_CL<br>
+      USE_STDPERIPH_DRIVER, STM32F10X_CL</td>
+  </tr>
+  <tr bordercolor="#0099ff" bgcolor="#ffffff">
+    <td height="33" align="left">LQFP100</td>
+    <td>STM32F103VBT6  코어모듈<br>
+      STM32F103VCT6  코어모듈<br>
+      STM32F105VCT6  코어모듈<br>
+      STM32F107VCT6  코어모듈<br>
+      STM32F107VBT6  코어모듈</td>
+    <td>USE_STDPERIPH_DRIVER, STM32F10X_HD<br>
+      USE_STDPERIPH_DRIVER, STM32F10X_HD<br>
+      USE_STDPERIPH_DRIVER, STM32F10X_CL<br>
+      USE_STDPERIPH_DRIVER, STM32F10X_CL<br>
+      USE_STDPERIPH_DRIVER, STM32F10X_CL</td>
+  </tr>
+  <tr bordercolor="#0099ff" bgcolor="#ffffff">
+    <td height="32" align="left">LQFP144</td>
+    <td>STM32F103ZET6  코어모듈</td>
+    <td>USE_STDPERIPH_DRIVER, STM32F10X_HD</td>
+  </tr>
+</table>
+<br>
+<H4><A name="5.1" id="5.1"></A>5.1 Keil MDK 4.02</H4>
+<a href="http://www.jkelec.co.kr/img/arm/cortex-m3/core_stm32_lqfp64/core_stm32f10x_manual_keil.htm" target="_blank"> 프로그램 개발을 위한 Keil MDK 컴파일러 설정 방법과 컴파일(새창)</a><br>
+<H4><A name="5.2" id="5.2"></A>5.2 IAR Workbench 5.4</H4>
+<a href="http://www.jkelec.co.kr/img/arm/cortex-m3/core_stm32_lqfp64/core_stm32f10x_manual_iar5.htm" target="_blank">프로그램 개발을 위한 IAR 컴파일러 설정 방법과 컴파일(새창)</a><br>
+<H4><A name="5.3" id="5.3"></A>5.3 RIDE7</H4>
+<a href="http://www.jkelec.co.kr/img/arm/cortex-m3/core_stm32_lqfp64/core_stm32f10x_manual_ride7.htm" target="_blank">프로그램 개발을 위한 RIDE7 컴파일러 설정 방법과 컴파일(새창)</a><br>
+<br>
+        <br>
+        <H3>&nbsp;</H3>
+        <p><br>  
+    <br>  
+  <br>
+</p></td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
