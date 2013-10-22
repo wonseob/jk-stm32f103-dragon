@@ -1,0 +1,104 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\svn\google_code\jk-stm32f4-dragon\sw\led\prj\MDK-ARMv4\led.uvproj
+Project File Date:  09/11/2013
+
+<h2>Output:</h2>
+Build target 'stm32f4_dragon'
+compiling stm32f4xx_it.c...
+compiling main.c...
+..\..\main.c(27): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+..\..\main.c(41): error:  #20: identifier "__IO" is undefined
+..\..\main.c(41): error:  #18: expected a ")"
+..\..\main.c(43): error:  #20: identifier "nCount" is undefined
+..\..\main.c(53): warning:  #223-D: function "RCC_AHB1PeriphClockCmd" declared implicitly
+..\..\main.c(53): error:  #20: identifier "RCC_AHB1Periph_GPIOC" is undefined
+..\..\main.c(53): error:  #20: identifier "ENABLE" is undefined
+..\..\main.c(56): error:  #20: identifier "GPIO_Pin_12" is undefined
+..\..\main.c(57): error:  #20: identifier "GPIO_Mode_OUT" is undefined
+..\..\main.c(58): error:  #20: identifier "GPIO_OType_PP" is undefined
+..\..\main.c(59): error:  #20: identifier "GPIO_Speed_100MHz" is undefined
+..\..\main.c(60): error:  #20: identifier "GPIO_PuPd_NOPULL" is undefined
+..\..\main.c(61): warning:  #223-D: function "GPIO_Init" declared implicitly
+..\..\main.c(61): error:  #20: identifier "GPIOC" is undefined
+..\..\main.c(66): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+compiling stm32f4xx_syscfg.c...
+..\..\..\lib\STM32_USB-Host-Device_Lib_V2.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c(49): error:  #5: cannot open source input file "stm32f4xx_syscfg.h": No such file or directory
+compiling misc.c...
+..\..\..\lib\STM32_USB-Host-Device_Lib_V2.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c(76): error:  #5: cannot open source input file "misc.h": No such file or directory
+compiling stm32f4xx_gpio.c...
+..\..\..\lib\STM32_USB-Host-Device_Lib_V2.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c(85): error:  #5: cannot open source input file "stm32f4xx_gpio.h": No such file or directory
+compiling stm32f4xx_rcc.c...
+..\..\..\lib\STM32_USB-Host-Device_Lib_V2.1.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c(62): error:  #5: cannot open source input file "stm32f4xx_rcc.h": No such file or directory
+compiling system_stm32f4xx.c...
+..\..\..\lib\STM32_USB-Host-Device_Lib_V2.1.0\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c(378): error:  #20: identifier "PWR_CR_VOS" is undefined
+assembling startup_stm32f4xx.s...
+Target not created
+Build target 'stm32f4_dragon'
+compiling stm32f4xx_it.c...
+compiling main.c...
+..\..\main.c(27): error:  #20: identifier "GPIO_InitTypeDef" is undefined
+..\..\main.c(41): error:  #20: identifier "__IO" is undefined
+..\..\main.c(41): error:  #18: expected a ")"
+..\..\main.c(43): error:  #20: identifier "nCount" is undefined
+..\..\main.c(53): warning:  #223-D: function "RCC_AHB1PeriphClockCmd" declared implicitly
+..\..\main.c(53): error:  #20: identifier "RCC_AHB1Periph_GPIOC" is undefined
+..\..\main.c(53): error:  #20: identifier "ENABLE" is undefined
+..\..\main.c(56): error:  #20: identifier "GPIO_Pin_12" is undefined
+..\..\main.c(57): error:  #20: identifier "GPIO_Mode_OUT" is undefined
+..\..\main.c(58): error:  #20: identifier "GPIO_OType_PP" is undefined
+..\..\main.c(59): error:  #20: identifier "GPIO_Speed_100MHz" is undefined
+..\..\main.c(60): error:  #20: identifier "GPIO_PuPd_NOPULL" is undefined
+..\..\main.c(61): warning:  #223-D: function "GPIO_Init" declared implicitly
+..\..\main.c(61): error:  #20: identifier "GPIOC" is undefined
+..\..\main.c(66): warning:  #223-D: function "GPIO_SetBits" declared implicitly
+compiling stm32f4xx_syscfg.c...
+compiling misc.c...
+compiling stm32f4xx_gpio.c...
+compiling stm32f4xx_rcc.c...
+compiling system_stm32f4xx.c...
+Target not created
+Build target 'stm32f4_dragon'
+compiling main.c...
+linking...
+Program Size: Code=2960 RO-data=424 RW-data=44 ZI-data=1636  
+"led.axf" - 0 Error(s), 0 Warning(s).
+Load "D:\\svn\\google_code\\jk-stm32f4-dragon\\sw\\led\\prj\\MDK-ARMv4\\led.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'stm32f4_dragon'
+compiling main.c...
+linking...
+Program Size: Code=2968 RO-data=424 RW-data=44 ZI-data=1636  
+"led.axf" - 0 Error(s), 0 Warning(s).
+Load "D:\\svn\\google_code\\jk-stm32f4-dragon\\sw\\led\\prj\\MDK-ARMv4\\led.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'stm32f4_dragon'
+compiling main.c...
+linking...
+Program Size: Code=2960 RO-data=424 RW-data=44 ZI-data=1636  
+"led.axf" - 0 Error(s), 0 Warning(s).
+Load "D:\\svn\\google_code\\jk-stm32f4-dragon\\sw\\led\\prj\\MDK-ARMv4\\led.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'stm32f4_dragon'
+compiling main.c...
+linking...
+Program Size: Code=2960 RO-data=424 RW-data=44 ZI-data=1636  
+"led.axf" - 0 Error(s), 0 Warning(s).
+Build target 'stm32f4_dragon'
+compiling main.c...
+linking...
+Program Size: Code=2968 RO-data=424 RW-data=44 ZI-data=1636  
+"led.axf" - 0 Error(s), 0 Warning(s).
+Load "D:\\svn\\google_code\\jk-stm32f4-dragon\\sw\\led\\prj\\MDK-ARMv4\\led.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.

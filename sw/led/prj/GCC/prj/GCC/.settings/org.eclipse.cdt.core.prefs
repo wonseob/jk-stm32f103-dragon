@@ -1,0 +1,15 @@
+#Tue Oct 01 15:14:50 KST 2013
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.75487283/CWD/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.75487283/CWD/operation=replace
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.75487283/CWD/value="${ProjDirPath}"\\Debug
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.75487283/PWD/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.75487283/PWD/operation=replace
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.75487283/PWD/value="${ProjDirPath}"\\Debug
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.75487283/append=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.75487283/appendContributed=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.release.1173649870/CWD/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.cross.exe.release.1173649870/CWD/operation=replace
+environment/project/cdt.managedbuild.config.gnu.cross.exe.release.1173649870/CWD/value="${ProjDirPath}"\\Debug
+environment/project/cdt.managedbuild.config.gnu.cross.exe.release.1173649870/append=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.release.1173649870/appendContributed=true
