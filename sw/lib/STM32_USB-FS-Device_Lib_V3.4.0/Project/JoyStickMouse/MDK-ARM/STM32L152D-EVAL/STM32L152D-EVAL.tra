@@ -1,0 +1,49 @@
+*** Creating Trace Output File '.\STM32L152D-EVAL\STM32L152D-EVAL.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\stm32l152d-eval\misc.o"'
+### List of Objects: adding '".\stm32l152d-eval\hw_config.o"'
+### List of Objects: adding '".\stm32l152d-eval\main.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_desc.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_istr.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_prop.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_pwr.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_endp.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32_it.o"'
+### List of Objects: adding '".\stm32l152d-eval\system_stm32f10x.o"'
+### List of Objects: adding '".\stm32l152d-eval\startup_stm32f10x_hd.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_core.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_init.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_int.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_mem.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_regs.o"'
+### List of Objects: adding '".\stm32l152d-eval\otgd_fs_cal.o"'
+### List of Objects: adding '".\stm32l152d-eval\otgd_fs_dev.o"'
+### List of Objects: adding '".\stm32l152d-eval\otgd_fs_int.o"'
+### List of Objects: adding '".\stm32l152d-eval\otgd_fs_pcd.o"'
+### List of Objects: adding '".\stm32l152d-eval\usb_sil.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32f10x_pwr.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32f10x_rcc.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32f10x_exti.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32f10x_gpio.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32f10x_i2c.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32f10x_usart.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32f10x_flash.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32f10x_spi.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32f10x_dma.o"'
+### List of Objects: adding '".\stm32l152d-eval\stm32f10x_sdio.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\stm32l152d-eval\misc.o" ".\stm32l152d-eval\hw_config.o" ".\stm32l152d-eval\main.o" ".\stm32l152d-eval\usb_desc.o" ".\stm32l152d-eval\usb_istr.o" ".\stm32l152d-eval\usb_prop.o" ".\stm32l152d-eval\usb_pwr.o" ".\stm32l152d-eval\usb_endp.o" ".\stm32l152d-eval\stm32_it.o" ".\stm32l152d-eval\system_stm32f10x.o" ".\stm32l152d-eval\startup_stm32f10x_hd.o" ".\stm32l152d-eval\usb_core.o" ".\stm32l152d-eval\usb_init.o" ".\stm32l152d-eval\usb_int.o" ".\stm32l152d-eval\usb_mem.o" ".\stm32l152d-eval\usb_regs.o" ".\stm32l152d-eval\otgd_fs_cal.o" ".\stm32l152d-eval\otgd_fs_dev.o" ".\stm32l152d-eval\otgd_fs_int.o" ".\stm32l152d-eval\otgd_fs_pcd.o" ".\stm32l152d-eval\usb_sil.o" ".\stm32l152d-eval\stm32f10x_pwr.o" ".\stm32l152d-eval\stm32f10x_rcc.o" ".\stm32l152d-eval\stm32f10x_exti.o" ".\stm32l152d-eval\stm32f10x_gpio.o" ".\stm32l152d-eval\stm32f10x_i2c.o" ".\stm32l152d-eval\stm32f10x_usart.o" ".\stm32l152d-eval\stm32f10x_flash.o" ".\stm32l152d-eval\stm32f10x_spi.o" ".\stm32l152d-eval\stm32f10x_dma.o" ".\stm32l152d-eval\stm32f10x_sdio.o" --library_type=microlib --strict --scatter ".\STM32L152D-EVAL\STM32L152D-EVAL.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\STM32L152D-EVAL\STM32L152D-EVAL.map" -o ".\STM32L152D-EVAL\STM32L152D-EVAL.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\STM32L152D-EVAL\STM32L152D-EVAL.axf'
+### ADS-LD Command File: '.\STM32L152D-EVAL\STM32L152D-EVAL.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\STM32L152D-EVAL\STM32L152D-EVAL.lnp', Handle=0x00000428
+### Writing '.lnp' file
+### ADS-LD Command file '.\STM32L152D-EVAL\STM32L152D-EVAL.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

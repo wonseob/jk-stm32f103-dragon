@@ -1,0 +1,74 @@
+L 1 "..\..\..\Utilities\STM32_EVAL\STM32L152D_EVAL\stm32l152d_eval.c"
+N/**
+N  ******************************************************************************
+N  * @file    stm32l152d_eval.c
+N  * @author  MCD Application Team
+N  * @version V1.0.1
+N  * @date    09-March-2012
+N  * @brief   This file provides
+N  *            - set of firmware functions to manage Leds, push-button and COM ports
+N  *            - low level initialization functions for SD card (on SDIO), SPI serial
+N  *              flash (sFLASH) and temperature sensor (LM75)
+N  *          available on STM32L152D-EVAL evaluation board from STMicroelectronics.  
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************
+N  */
+N  
+N/* Includes ------------------------------------------------------------------*/
+N#include "stm32l152d_eval.h"
+L 1 "..\..\..\Utilities\STM32_EVAL\STM32L152D_EVAL\stm32l152d_eval.h" 1
+N/**
+N  ******************************************************************************
+N  * @file    stm32l152d_eval.h
+N  * @author  MCD Application Team
+N  * @version V1.0.1
+N  * @date    09-March-2012
+N  * @brief   This file contains definitions for STM32L152D_EVAL's Leds, push-buttons
+N  *          COM ports and Temperature Sensor LM75 (on I2C) hardware resources.  
+N  ******************************************************************************
+N  * @attention
+N  *
+N  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+N  *
+N  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+N  * You may not use this file except in compliance with the License.
+N  * You may obtain a copy of the License at:
+N  *
+N  *        http://www.st.com/software_license_agreement_liberty_v2
+N  *
+N  * Unless required by applicable law or agreed to in writing, software 
+N  * distributed under the License is distributed on an "AS IS" BASIS, 
+N  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+N  * See the License for the specific language governing permissions and
+N  * limitations under the License.
+N  *
+N  ******************************************************************************
+N  */
+N  
+N/* Define to prevent recursive inclusion -------------------------------------*/
+N#ifndef __STM32L152D_EVAL_H
+N#define __STM32L152D_EVAL_H
+N
+N#ifdef __cplusplus
+S extern "C" {
+N#endif 
+N
+N/* Includes ------------------------------------------------------------------*/
+C "..\..\..\Utilities\STM32_EVAL\STM32L152D_EVAL\stm32l152d_eval.h" 38 23 cannot open source input file "stm32l1xx.h": No such file or directory
+N#include "stm32l1xx.h"
